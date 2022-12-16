@@ -106,10 +106,10 @@ void TFTUtils::showMain() {
 
     tft.setTextColor(TFT_WHITE, lightblue);
     tft.setCursor(4, 152, 2);
-    tft.println("TEMP:");
+    // tft.println("TEMP:");
 
     tft.setCursor(4, 192, 2);
-    tft.println("HUM: ");
+    // tft.println("HUM: ");
 
     tft.fillRect(68, 152, 1, 74, TFT_GREY);
 
@@ -533,9 +533,9 @@ void TFTUtils::displayMainValues(){
 
         if (wstate == 0 || wstate == 3) {
             tft.setCursor(1, 187);
-            tft.printf("%02.1f", _temp);
+            // tft.printf("%02.1f", _temp);
             tft.setCursor(1, 227);
-            tft.printf("%02d%%", (int)_humi);
+            // tft.printf("%02d%%", (int)_humi);
             displayMainHeader();
         } 
         else {
