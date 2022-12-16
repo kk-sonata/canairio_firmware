@@ -120,7 +120,7 @@ void hassPublish() {
     uint32_t ptime = cfg.stime;
     if (ptime<MIN_PUBLISH_INTERVAL) ptime = MIN_PUBLISH_INTERVAL-1; // publish before to the last cloud
     if(!cfg.solarmode && cfg.deepSleep > 0) ptime = cfg.deepSleep;
-    if (millis() - mqttTimeStamp > ptime) {
+    if (millis() - mqttTimeStamp > ptime * 1000) {
         mqttTimeStamp = millis(); 
         if (!hassConfigured) hassRegisterSensors();
         hassPubSensorPayload();
